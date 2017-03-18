@@ -12,9 +12,5 @@ def contato(request):
     return render(request, 'contato.html')
 
 
-def list_produtos(request):
-    return render(request, 'lista_produtos.html')
-
-
 def produto(request):
     return render(request, 'produto.html')

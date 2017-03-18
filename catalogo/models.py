@@ -17,6 +17,9 @@ class Categoria(models.Model):
         verbose_name_plural = 'Categorias'
         ordering = ['nome']
 
+    def __str__(self):
+        return self.nome
+
 class Produto(models.Model):
 
     nome = models.CharField('Nome', max_length=100)
@@ -32,3 +35,6 @@ class Produto(models.Model):
         verbose_name = 'Produto'
         verbose_name_plural = 'Produtos'
         ordering = ['nome']
+
+    def __str__(self):
+        return self.nome
