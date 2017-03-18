@@ -49,3 +49,7 @@ design/
 
 # archives pycharm
 .idea
+
+local_settings.py
+
+db.sqlite3
