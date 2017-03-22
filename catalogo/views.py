@@ -5,7 +5,7 @@ from django.shortcuts import render
 from .models import Produto, Categoria
 
 def list_produtos(request):
-    context = {
+    contexto = {
         'produtos': Produto.objects.all()
     }
-    return render(request, 'catalogo/lista_produtos.html', context)
+    return render(request, 'catalogo/lista_produtos.html', contexto)
