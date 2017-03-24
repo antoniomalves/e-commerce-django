@@ -23,7 +23,6 @@ from core import views
 urlpatterns = [
     url(r'^$', views.index, name="index"),
     url(r'^contato/$', views.contato, name="contato"),
-    url(r'^produtos/', include('catalogo.urls', namespace='catalogo')),
-    url(r'^produto/$', views.produto, name="produto"),
+    url(r'^catalogo/', include('catalogo.urls', namespace='catalogo')),
     url(r'^admin/', admin.site.urls),
 ]

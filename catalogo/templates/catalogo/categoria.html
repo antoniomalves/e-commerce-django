@@ -1,15 +1,15 @@
 {%extends 'base.html'%}
 
 {% block title %}
-    Listagem de Produtos | {{block.super}}
+    {{ categoria_atual }} | {{block.super}}
 {% endblock %}
 
 {% block container %}
 <div class="page-header">
-    <h1>Produtos</h1>
+    <h1>{{ categoria_atual }}</h1>
 </div>
 <div class="row">
-    {%for produto in produtos %}
+    {%for produto in list_produto %}
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
                 <a href="{{produto.get_absolute_url}}">

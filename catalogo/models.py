@@ -1,6 +1,7 @@
 # coding=utf-8
 
 from django.db import models
+from django.core.urlresolvers import reverse
 
 # Create your models here.
 
@@ -20,6 +21,9 @@ class Categoria(models.Model):
     def __str__(self):
         return self.nome
 
+    def get_absolute_url(self):
+        return reverse('catalogo:categoria', kwargs={'slug': self.slug})
+
 class Produto(models.Model):
 
     nome = models.CharField('Nome', max_length=100)
@@ -38,3 +42,7 @@ class Produto(models.Model):
 
     def __str__(self):
         return self.nome
+
+    def get_absolute_url(self):
+        return reverse('catalogo:produto', kwargs={'slug': self.slug})
+
